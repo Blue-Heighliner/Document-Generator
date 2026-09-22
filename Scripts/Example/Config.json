@@ -1,0 +1,32 @@
+{
+  "title": ["Blue Ridge Trail Network"],
+  "subtitle": { "lines": ["Q3 2026 Maintenance Report"], "italic": true },
+  "exclusion": true,
+  "heading1": {
+    "color": "#1F2937",
+    "numbering": "decimal",
+    "pageBreakAfter": true
+  },
+  "heading2": {
+    "color": "#374151",
+    "numbering": "decimal",
+    "numberingPrefix": true
+  },
+  "heading3": {
+    "bold": false,
+    "italic": true,
+    "color": "#4B5563",
+    "numbering": "lowerRoman",
+    "numberingPrefix": true,
+    "tableOfContents": true
+  },
+  "header": {
+    "left": ["Blue Ridge Trail Network"],
+    "right": ["Parks & Trails Division"]
+  },
+  "footer": {
+    "left": ["Parks & Trails Division", "555 Ridge Road, Blue Ridge, VA", "trails@parksdivision.example.gov"],
+    "right": [{ "line": "DRAFT - awaiting sign-off", "mode": "cover" }],
+    "pageNumbers": "right"
+  }
+}

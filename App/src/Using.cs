@@ -1,0 +1,15 @@
+global using System.Buffers.Binary;
+global using System.Globalization;
+global using System.Text;
+global using System.Text.Json;
+global using System.Text.Json.Serialization;
+global using BlueHeighliner.DocumentGenerator.Configuration;
+global using BlueHeighliner.DocumentGenerator.Markdown;
+global using BlueHeighliner.DocumentGenerator.Numbering;
+global using BlueHeighliner.DocumentGenerator.Rendering;
+global using DocumentFormat.OpenXml;
+global using DocumentFormat.OpenXml.Packaging;
+global using DocumentFormat.OpenXml.Wordprocessing;
+global using Markdig;
+global using Markdig.Syntax;
+global using Markdig.Syntax.Inlines;
