@@ -9,7 +9,7 @@ actions.
 
 - `Scripts/Test.cs` - runs the test suite with coverage collection and prints a summary.
 - `Scripts/Verify.cs` - applies formatting fixes and regenerates the coverage badge.
-- `Scripts/Run.cs` - runs the app locally via `dotnet run`.
+- `Scripts/Run.cs` - runs the app against the example config/markdown in `Scripts/Example`, writing `Scripts/Example/Output.docx`.
 - `Scripts/Publish.cs` - cuts a release (see Publishing below). A manual, human-only action.
 
 ## Publishing
