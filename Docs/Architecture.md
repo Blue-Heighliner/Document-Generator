@@ -58,6 +58,21 @@ caller-supplied default value and overlays only the fields present in the JSON.
 each supply their own default instance, since a single shared converter has no way to know which
 property it's being used for.
 
+## `App.csproj` declares both publish RIDs up front, even though no single build needs more than one
+
+`RuntimeIdentifiers` (plural) lists `win-x64;linux-x64`, even though no single `dotnet
+build`/`dotnet test` run - or even a single `dotnet publish` - needs more than one of them at a
+time. With `RestorePackagesWithLockFile` on, `packages.lock.json` records a separate dependency
+graph per RID, and NuGet only considers the file internally consistent if the current restore's
+RID set exactly matches every RID section already present in it - so once a second RID's section
+exists (added the first time `build.yml`'s `publish` job runs `dotnet publish -r <rid>` for a
+platform not yet in the file), a later single-RID restore for *either* platform fails
+`RestoreLockedMode=true` with `NU1004`, regardless of publish order. Declaring every published RID
+here up front makes one plain `dotnet restore` capture all of their graphs atomically in a single
+consistent file, so each subsequent single-RID publish succeeds against it.
+`Directory.Build.props` covers hash reproducibility for what's *in* the lock file; this covers
+which RID sections it needs to have.
+
 ## Table of contents and page numbers are real Word fields, not pre-computed text
 
 The alternative would be computing the table of contents (and running page numbers) ourselves and
