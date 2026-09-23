@@ -108,4 +108,4 @@ jobs:
       - name: Upload release assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh release upload "${{ steps.version.outputs.version }}" "publish/win-x64/docgen.exe" "publish/linux-x64/docgen"
+        run: gh release upload "${{ steps.version.outputs.version }}" "publish/win-x64/docgen.exe" "publish/linux-x64/docgen" "THIRD-PARTY-NOTICES.txt"

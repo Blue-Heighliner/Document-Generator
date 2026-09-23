@@ -11,7 +11,8 @@ a JSON configuration file: per-heading-level font/numbering/spacing, page header
 optional table of contents, configurable page breaks after chosen heading levels, and markdown
 tables, code blocks, and mermaid diagrams converted to their document equivalents. Built on
 [Markdig](https://github.com/xoofx/markdig) for markdown parsing and the
-[Open XML SDK](https://github.com/dotnet/Open-XML-SDK) for document generation.
+[Open XML SDK](https://github.com/dotnet/Open-XML-SDK) for document generation - see
+[`THIRD-PARTY-NOTICES.txt`](THIRD-PARTY-NOTICES.txt) for their license terms.
 
 ## Requirements
 

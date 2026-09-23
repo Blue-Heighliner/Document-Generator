@@ -73,6 +73,21 @@ consistent file, so each subsequent single-RID publish succeeds against it.
 `Directory.Build.props` covers hash reproducibility for what's *in* the lock file; this covers
 which RID sections it needs to have.
 
+## Third-party license notices are a static file, checked by hand, not generated at build time
+
+`Markdig` is BSD-2-Clause and `DocumentFormat.OpenXml`/`DocumentFormat.OpenXml.Framework` (and
+their transitive `System.IO.Packaging` dependency) are MIT - all three require, for binary
+redistribution, that their copyright notice and license text accompany the distributed binary
+(BSD-2-Clause says so explicitly for binary form; MIT's single condition is conventionally read
+the same way). Since `docgen.exe`/`docgen` are self-contained executables that statically link
+these libraries' compiled IL, and are distributed as GitHub Release assets, that requirement
+applies directly. `THIRD-PARTY-NOTICES.txt` at the repo root satisfies it by reproducing each
+dependency's exact license text, and `build.yml`'s publish job uploads it alongside the two
+executables on every release. It isn't generated from `packages.lock.json` at build time - the
+dependency set changes rarely enough that hand-maintaining it when a `PackageReference` changes is
+simpler than adding a license-scanning step to CI, and a generated file would still need a human to
+verify the license expression before trusting it.
+
 ## Table of contents and page numbers are real Word fields, not pre-computed text
 
 The alternative would be computing the table of contents (and running page numbers) ourselves and

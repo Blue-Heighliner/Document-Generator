@@ -22,8 +22,8 @@ Run `Scripts/Publish.cs` locally to cut a release:
    create` - done locally because a repo ruleset blocks the default `GITHUB_TOKEN` from creating tags.
 3. It dispatches `build.yml`'s `workflow_dispatch` trigger with the version as input. The workflow
    verifies the dispatcher has Admin permission on the repo, refuses to run from anything but `main`,
-   publishes self-contained single-file executables for Windows and Linux (x64), and uploads them as
-   release assets.
+   publishes self-contained single-file executables for Windows and Linux (x64), and uploads them
+   alongside `THIRD-PARTY-NOTICES.txt` as release assets.
 4. It waits for that run to finish, rolling the release/tag back if the workflow fails, so a failed
    publish never leaves one behind. If it can't confirm the run happened at all, it leaves the release
    in place instead, rather than risk deleting one that's still running.
