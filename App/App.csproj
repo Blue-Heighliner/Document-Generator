@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>BlueHeighliner.DocumentGenerator</RootNamespace>
-    <AssemblyName>BlueHeighliner.DocumentGenerator</AssemblyName>
+    <AssemblyName>docgen</AssemblyName>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <OutputType>Exe</OutputType>

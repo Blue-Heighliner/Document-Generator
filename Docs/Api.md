@@ -9,7 +9,7 @@ command line invocation and the JSON configuration schema it reads. This documen
 The executable takes exactly three positional arguments:
 
 ```
-BlueHeighliner.DocumentGenerator <config.json> <input.md> <output.docx>
+docgen <config.json> <input.md> <output.docx>
 ```
 
 `config.json` is a single JSON object with four top-level concerns: per-level heading styling

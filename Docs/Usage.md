@@ -16,7 +16,7 @@ alone is enough to get a styled title and a styled `# Heading` in the body:
 ```
 
 ```sh
-BlueHeighliner.DocumentGenerator config.json input.md output.docx
+docgen config.json input.md output.docx
 ```
 
 ## Numbered headings with a table of contents

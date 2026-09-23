@@ -24,12 +24,11 @@ tables, code blocks, and mermaid diagrams converted to their document equivalent
 Download the executable for your platform from the latest
 [Release](https://github.com/Blue-Heighliner/Document-Generator/releases):
 
-- **Windows** - download `BlueHeighliner.DocumentGenerator.exe` and run it.
-- **Linux** - download `BlueHeighliner.DocumentGenerator`, mark it executable
-  (`chmod +x BlueHeighliner.DocumentGenerator`), and run it.
+- **Windows** - download `docgen.exe` and run it.
+- **Linux** - download `docgen`, mark it executable (`chmod +x docgen`), and run it.
 
 ```sh
-BlueHeighliner.DocumentGenerator <config.json> <input.md> <output.docx>
+docgen <config.json> <input.md> <output.docx>
 ```
 
 ## Documentation

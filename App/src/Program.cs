@@ -9,7 +9,7 @@ internal sealed class Program
     {
         if (args.Length != 3)
         {
-            Console.Error.WriteLine("Usage: DocumentGenerator <config.json> <input.md> <output.docx>");
+            Console.Error.WriteLine("Usage: docgen <config.json> <input.md> <output.docx>");
             return 1;
         }
 

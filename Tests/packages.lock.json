@@ -141,7 +141,7 @@
           "xunit.extensibility.core": "[2.9.3]"
         }
       },
-      "BlueHeighliner.DocumentGenerator": {
+      "docgen": {
         "type": "Project",
         "dependencies": {
           "DocumentFormat.OpenXml": "[3.5.1, )",
