@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <!--
+      Excludes the local .NET SDK's own "library-packs" folder as an implicit restore source. A
+      Linux distro-packaged SDK (e.g. Ubuntu's dotnet-sdk-10.0) bundles its own rebuilt copies of
+      implicit packages like Microsoft.NET.ILLink.Tasks there and silently prefers them over
+      nuget.org; those rebuilds' content hashes differ from nuget.org's, so without this, a
+      packages.lock.json generated on such a machine can record a hash CI (which always installs
+      the official Microsoft SDK, with no such folder) can never reproduce, failing
+      RestoreLockedMode=true with NU1403. Setting this repo-wide, rather than only ever remembering
+      to pass -p:DisableImplicitLibraryPacksFolder=true by hand, makes every restore/build/publish
+      here - local or CI - resolve implicit packages from nuget.org consistently, so a bad hash
+      never gets committed in the first place.
+    -->
+    <DisableImplicitLibraryPacksFolder>true</DisableImplicitLibraryPacksFolder>
+  </PropertyGroup>
+</Project>
